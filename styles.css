@@ -73,43 +73,68 @@ p { color: var(--muted); }
 
 .hero-card {
   position: relative;
-  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2.5rem;
+
+  padding: 2.5rem;
+
+  min-height: 760px;
+
   border: 1px solid var(--line);
   border-radius: 32px;
-  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.02)
+  );
+
   box-shadow: var(--shadow);
   overflow: hidden;
-  min-height: 420px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  align-items: center;
-  justify-items: center;
 }
 
 .hero-card .glow {
   position: absolute;
   inset: 16%;
+
   filter: blur(55px);
-  background: linear-gradient(135deg, rgba(31,99,184,.7), rgba(159,52,46,.55));
+
+  background: linear-gradient(
+    135deg,
+    rgba(31,99,184,.7),
+    rgba(159,52,46,.55)
+  );
+
   border-radius: 50%;
   opacity: .52;
 }
 
 .hero-card img {
   position: relative;
-  width: min(72%, 360px);
-  max-height: 240px;
+
+  width: 100%;
+  max-width: 340px;
+
+  max-height: 280px;
   object-fit: contain;
-  background: rgba(255,255,255,.94);
+
+  background: rgba(255,255,255,.95);
+
   border-radius: 28px;
   padding: 1rem;
+
   box-shadow: 0 25px 65px rgba(0,0,0,.35);
 }
 
-.logo-srl,
-.logo-main {
+.logo-main,
+.logo-srl {
   transform: none;
+  margin: 0;
 }
 
 .section, .panel { margin: 0 clamp(1rem, 4vw, 4rem); }
@@ -142,7 +167,27 @@ p { color: var(--muted); }
 .site-footer { margin-top: 4rem; padding: 1.5rem clamp(1rem, 4vw, 4rem); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; color: var(--muted); }
 .site-footer p { margin: 0; }
 
-.hero-card { min-height: 320px; }
+@media (max-width: 1020px) {
+  .hero,
+  .intro,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .hero-card img {
+    max-width: 260px;
+    max-height: 220px;
+  }
+}
 @media (max-width: 720px) {
   .site-header { align-items: flex-start; gap: 1rem; flex-direction: column; }
   .nav { flex-wrap: wrap; }
