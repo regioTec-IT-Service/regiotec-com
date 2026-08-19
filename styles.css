@@ -142,11 +142,7 @@ p { color: var(--muted); }
 .site-footer { margin-top: 4rem; padding: 1.5rem clamp(1rem, 4vw, 4rem); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; color: var(--muted); }
 .site-footer p { margin: 0; }
 
-@media (max-width: 1020px) {
-  .hero, .intro, .split { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hero-card { min-height: 320px; }
-}
+.hero-card { min-height: 320px; }
 @media (max-width: 720px) {
   .site-header { align-items: flex-start; gap: 1rem; flex-direction: column; }
   .nav { flex-wrap: wrap; }
