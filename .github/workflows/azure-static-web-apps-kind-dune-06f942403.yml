@@ -36,7 +36,7 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_DUNE_06F942403 }}
+          azure_static_web_apps_api_token: ${{ 64171398d17fe36897f95793ee27388810ddbf645d596141512a25f84924411007-2abc9248-43e0-4361-9e2e-1151024e2f72003220706f942403 }}
           action: "upload"
           skip_app_build: true
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
