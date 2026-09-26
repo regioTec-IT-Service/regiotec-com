@@ -36,7 +36,7 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ 64171398d17fe36897f95793ee27388810ddbf645d596141512a25f84924411007-2abc9248-43e0-4361-9e2e-1151024e2f72003220706f942403 }}
+          azure_static_web_apps_api_token: ${{ AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_DUNE_06F942403 }}
           action: "upload"
           skip_app_build: true
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
@@ -44,7 +44,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "." # Built app content directory - optional
-         github_id_token: ${{ steps.idtoken.outputs.result }}
+          github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
